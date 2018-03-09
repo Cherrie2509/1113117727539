@@ -1,10 +1,16 @@
-/*global$*/
+/* global $ */
 
 function validateDetails(){
     
     var pin;
+    var name;
+    var email;
     
     pin= document.getElementById("user_pin").value;
+    name= document.getElementById("name").value;
+    email= document.getElementById("email").value;
+
+
     
     if(pin == ""){
         alert("please enter your PIN");
@@ -15,7 +21,8 @@ function validateDetails(){
     else{
         enablebtnPurchase();
     }
-}
+
+}//End of validateDetails()
 
 function enablebtnPurchase(){
     $("#btnPurchase").prop("disabled", false)
